@@ -14,15 +14,10 @@ const routes: Routes = [
     {
         path: 'login',
         component: LoginComponent
-    },
-    
+    },    
     {
         path: 'signup',
         component: SignupComponent
-    },
-    {
-        path: 'notes',
-        component: NotesComponent
     },    
     {
         path: 'finances',
