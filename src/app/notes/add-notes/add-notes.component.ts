@@ -10,18 +10,21 @@ import { NotesService } from '../notes.service';
 })
 export class AddNotesComponent implements OnInit {
 
+  createdAt = new Date().getTime().toString();
+
   note: Notes = {
-    title: 'Nota nova',
-    description: 'Descrição',
-    date: '11/11/1111',
-    tags: ['tag', 'tag 2'],
-    isPrivate: true,
+    title: '',
+    description: '',
+    date: this.createdAt,
+    tags: [],
+    isPrivate: false,
   }
 
   constructor(private notesService: NotesService, private router: Router) { }
 
   ngOnInit(): void {
   }
+
 
   createNote(): void {
     this.notesService.createNote(this.note).subscribe(() => {

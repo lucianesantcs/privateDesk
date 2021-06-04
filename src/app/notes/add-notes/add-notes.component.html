@@ -1,4 +1,21 @@
 <p>add-notes works!</p>
+<form>
+    <label for="title">Título da nota</label>
+    <input type="text" id="title" name="title" [(ngModel)]="note.title" />
 
+    <label for="description">Descrição</label>
+    <textarea id="description" name="description" [(ngModel)]="note.description"></textarea>
+    
+    <label for="tags">Tags</label>
+    <input type="text" id="tags" name="tags" [(ngModel)]="note.tags" />
+
+    <label>Disponibilidade:</label>
+    <input type="radio" id="yes" value="true" name="isPrivate" ngModel>
+    <label for="yes">Privado</label>
+
+    <input type="radio" id="no" value="false" name="isPrivate" ngModel>
+    <label for="no">Visível</label>
+
+</form>
 <button (click)="createNote()">Criar nota</button>
 <button (click)="cancel()">Cancelar</button>
