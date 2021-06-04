@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NotesService } from '../notes.service';
 
 @Component({
   selector: 'app-add-notes',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddNotesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private notesService: NotesService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  createNote(): void {
+    this.notesService.showMessage('Nota criada com sucesso!')
+  }
+
+  cancel(): void {
+    this.router.navigate(['/notes']);
+  }
 }
