@@ -18,4 +18,8 @@ export class NotesService {
   createNote(note: Notes): Observable<Notes> {
     return this.http.post<Notes>(this.baseUrl, note);
   }
+
+  getNotes(): Observable<Notes> {
+    return this.http.get<Notes>(this.baseUrl);
+  }
 }
