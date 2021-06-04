@@ -1,0 +1,39 @@
+{
+  "notas": [
+    {
+      "id": 1,
+      "title": "Notaaaaaaa 1",
+      "description": "Descrição nota 1",
+      "date": "17/05/2021",
+      "tags": [
+        "#tag 1",
+        "#tag 2",
+        "#tag 3"
+      ],
+      "isPrivate": false
+    },
+    {
+      "id": 2,
+      "title": "Notaaaaaaaaa 2",
+      "description": "Descrição nota 2",
+      "date": "17/05/2021",
+      "tags": [
+        "#tag 1",
+        "#tag 2",
+        "#tag 3"
+      ],
+      "isPrivate": true
+    },
+    {
+      "title": "Nota nova",
+      "description": "Descrição",
+      "date": "11/11/1111",
+      "tags": [
+        "tag",
+        "tag 2"
+      ],
+      "isPrivate": true,
+      "id": 3
+    }
+  ]
+}
