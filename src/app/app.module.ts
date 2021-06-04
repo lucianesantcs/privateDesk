@@ -9,6 +9,8 @@ import { NotesComponent } from './notes/notes.component';
 import { FinancesComponent } from './finances/finances.component';
 import { AddNotesComponent } from './notes/add-notes/add-notes.component';
 import { PrivateNotesComponent } from './notes/private-notes/private-notes.component';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
   declarations: [
@@ -19,10 +21,12 @@ import { PrivateNotesComponent } from './notes/private-notes/private-notes.compo
     NotesComponent,
     FinancesComponent,
     AddNotesComponent,
-    PrivateNotesComponent
+    PrivateNotesComponent,
+    HeaderComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
