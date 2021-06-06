@@ -1,0 +1,6 @@
+<p>todas as notas</p>
+<div *ngIf="notes; then thenBlock; else elseBlock"></div>
+<ng-template #thenBlock>
+  <app-note [notes]="notes"></app-note>
+</ng-template>
+<ng-template #elseBlock> Não há notas a serem exibidas. </ng-template>

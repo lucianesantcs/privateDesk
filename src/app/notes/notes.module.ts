@@ -7,10 +7,11 @@ import { NotesComponent } from './notes.component';
 import { NotesHeaderComponent } from './components/notes-header/notes-header.component';
 import { NoteComponent } from './components/note/note.component';
 import { NotesRoutingModule } from './notes.routing.module';
+import { AllNotesComponent } from './all-notes/all-notes.component';
 
 @NgModule({
-  declarations: [AddNotesComponent, PrivateNotesComponent, NotesHeaderComponent, NotesComponent, NoteComponent],
+  declarations: [AddNotesComponent, PrivateNotesComponent, NotesHeaderComponent, NotesComponent, NoteComponent, AllNotesComponent],
   imports: [CommonModule, NotesRoutingModule, FormsModule],
-  exports: [NotesComponent, PrivateNotesComponent]
+  exports: [NotesComponent]
 })
 export class NotesModule {}
