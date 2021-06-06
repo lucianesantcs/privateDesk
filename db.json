@@ -2,7 +2,7 @@
   "notas": [
     {
       "id": 1,
-      "title": "Notaaaaaaa 1",
+      "title": "Nota 1",
       "description": "Descrição nota 1",
       "date": "17/05/2021",
       "tags": [
@@ -14,7 +14,7 @@
     },
     {
       "id": 2,
-      "title": "Notaaaaaaaaa 2",
+      "title": "Nota 2",
       "description": "Descrição nota 2",
       "date": "17/05/2021",
       "tags": [
@@ -25,7 +25,7 @@
       "isPrivate": true
     },
     {
-      "title": "Nota nova",
+      "title": "Nota 3",
       "description": "Descrição",
       "date": "11/11/1111",
       "tags": [
