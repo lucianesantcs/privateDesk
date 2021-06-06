@@ -12,6 +12,6 @@ import { AllNotesComponent } from './all-notes/all-notes.component';
 @NgModule({
   declarations: [AddNotesComponent, PrivateNotesComponent, NotesHeaderComponent, NotesComponent, NoteComponent, AllNotesComponent],
   imports: [CommonModule, NotesRoutingModule, FormsModule],
-  exports: [NotesComponent]
+  exports: [NotesComponent, AllNotesComponent]
 })
 export class NotesModule {}
