@@ -6,10 +6,10 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-import { FinancesComponent } from './finances/finances.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { AppRoutingModule } from './app.routing.module';
 import { NotesModule } from './notes/notes.module';
+import { FinancesModule } from './finances/finances.module';
 
 @NgModule({
   declarations: [
@@ -17,12 +17,12 @@ import { NotesModule } from './notes/notes.module';
     HomeComponent,
     LoginComponent,
     SignupComponent,
-    FinancesComponent,
     HeaderComponent
   ],
   imports: [
     BrowserModule,
     NotesModule,
+    FinancesModule,
     HttpClientModule,
     AppRoutingModule
   ],
