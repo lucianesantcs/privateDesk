@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Finances } from '../finances.model';
+import { FinancesService } from '../finances.service';
 
 @Component({
   selector: 'app-all-finances',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllFinancesComponent implements OnInit {
 
-  constructor() { }
+  finances: Finances;
+
+  constructor(private financesService: FinancesService) { }
 
   ngOnInit(): void {
+    this.financesService.getFinances().subscribe(finance => this.finances = finance);
   }
 
 }

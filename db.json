@@ -35,5 +35,49 @@
       "isPrivate": true,
       "id": 3
     }
+  ],
+  "financas": [
+    {
+      "id": 1,
+      "title": "Finança 1",
+      "description": "Descrição finança 1",
+      "value": 1548,
+      "date": "17/05/2021"
+    },
+    {
+      "id": 2,
+      "title": "Finança 2",
+      "description": "Descrição finança 2",
+      "value": 5548,
+      "date": "17/05/2021"
+    },
+    {
+      "id": 3,
+      "title": "Finança 3",
+      "description": "Descrição finança 3",
+      "value": 9548,
+      "date": "17/05/2021"
+    },
+    {
+      "title": "Finança 4",
+      "description": "Descrição finança 4",
+      "value": 5454,
+      "date": "1623169170032",
+      "id": 4
+    },
+    {
+      "title": "Finança 5",
+      "description": "Descrição finança 5",
+      "value": 155,
+      "date": "1623169347156",
+      "id": 5
+    },
+    {
+      "title": "Finança 6",
+      "description": "",
+      "value": 54852,
+      "date": "1623169455520",
+      "id": 6
+    }
   ]
 }

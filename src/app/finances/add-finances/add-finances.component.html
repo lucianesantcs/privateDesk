@@ -1,1 +1,12 @@
 <p>add-finances works!</p>
+<form>
+    <label for="title">Nome</label>
+    <input type="text" id="title" name="title" [(ngModel)]="finance.title">
+
+    <label for="value">Valor</label>
+    <input type="number" id="value" name="value" [(ngModel)]="finance.value">
+
+    <label for="description">Descrição</label>
+    <input type="text" id="description" name="description" [(ngModel)]="finance.description">
+</form>
+<button (click)="createFinance()">Adicionar</button>
