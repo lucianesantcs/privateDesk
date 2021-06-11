@@ -10,6 +10,8 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { AppRoutingModule } from './app.routing.module';
 import { NotesModule } from './notes/notes.module';
 import { FinancesModule } from './finances/finances.module';
+import { AuthService } from './login/auth.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,9 +26,10 @@ import { FinancesModule } from './finances/finances.module';
     NotesModule,
     FinancesModule,
     HttpClientModule,
+    FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
