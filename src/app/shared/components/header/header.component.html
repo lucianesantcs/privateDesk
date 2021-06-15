@@ -1,10 +1,17 @@
-<a [routerLink]="['/']"><h1>Private Desk</h1></a>
+<a [routerLink]="['/']">
+    <h1>Private Desk</h1>
+</a>
 <nav>
     <ul>
-        <li>
-            <a [routerLink]="['/']" routerLinkActive="router-link-active">Início</a>
-            <a [routerLink]="['/notes/all-notes']" routerLinkActive="router-link-active">Notas</a>
-            <a [routerLink]="['/finances/all-finances']" routerLinkActive="router-link-active">Finanças</a>
-        </li>
+        <div *ngIf="!showLoginMenu; else elseShowLoginMenu">
+            <li><a [routerLink]="['/login']" routerLinkActive="router-link-active">Login</a></li>
+            <li><a [routerLink]="['/signup']" routerLinkActive="router-link-active">Cadastro</a> </li>
+        </div>
+        <ng-template #elseShowLoginMenu>
+            <li><a [routerLink]="['/']" routerLinkActive="router-link-active">Início</a></li>
+            <li><a [routerLink]="['/notes/all-notes']" routerLinkActive="router-link-active">Notas</a> </li>
+            <li><a [routerLink]="['/finances/all-finances']" routerLinkActive="router-link-active">Finanças</a></li>
+        </ng-template>
     </ul>
+
 </nav>
