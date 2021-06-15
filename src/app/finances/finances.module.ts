@@ -11,9 +11,9 @@ import { FinancesRoutingModule } from './finances.routing.module';
 import { FinanceResultsComponent } from './components/finance-results/finance-results.component';
 
 @NgModule({
-    imports: [CommonModule, FormsModule, FinancesRoutingModule],
-    exports: [FinancesComponent, AllFinancesComponent, FinanceComponent],
     declarations: [FinancesComponent, AddFinancesComponent, AllFinancesComponent, FinanceComponent, FinancesHeaderComponent, FinanceResultsComponent],
+    imports: [CommonModule, FormsModule, FinancesRoutingModule],
+    exports: [FinancesComponent, AllFinancesComponent, FinanceComponent, FinanceResultsComponent],
     providers: [],
 })
 export class FinancesModule { }
