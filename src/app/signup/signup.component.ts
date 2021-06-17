@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { User } from '../login/user.model';
 import { SignupService } from './signup.service';
 
 @Component({
@@ -9,14 +10,21 @@ import { SignupService } from './signup.service';
 })
 export class SignupComponent implements OnInit {
 
+  user: User = {
+    email: '',
+    password: ''
+  }
+
   constructor(private signupService: SignupService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   createUser(): void {
-    this.signupService.showMessage('Usuário criado com sucesso!');
-    this.router.navigate(['/login']);
+    this.signupService.createUser(this.user).subscribe(() => {
+      this.signupService.showMessage('Usuário criado com sucesso!');
+      this.router.navigate(['/login']);
+    });
   }
 
   cancel(): void {

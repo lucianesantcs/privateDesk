@@ -79,5 +79,17 @@
       "date": "1623169455520",
       "id": 6
     }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "email": "user@email.com",
+      "password": "123"
+    },
+    {
+      "email": "user2@email.com",
+      "password": "123",
+      "id": 2
+    }
   ]
 }
