@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from '../login/user.model';
 import { SignupService } from './signup.service';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
@@ -16,9 +16,11 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      email: [null],
-      password: [null]
+      email: [null, Validators.required], 
+      password: [null, [Validators.required, Validators.email]]
     });
+
+    console.log(this.form);
   }
 
   createUser(): void {
