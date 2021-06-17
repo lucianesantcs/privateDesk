@@ -16,11 +16,9 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      email: [null, Validators.required], 
+      email: [null, [Validators.required]], 
       password: [null, [Validators.required, Validators.email]]
     });
-
-    console.log(this.form);
   }
 
   createUser(): void {
@@ -32,6 +30,16 @@ export class SignupComponent implements OnInit {
 
   cancel(): void {
     this.router.navigate(['/signup']);
+  }
+
+  checkValidTouched(field) {
+    return !this.form.get(field).valid && !this.form.get(field).touched;
+  }
+
+  classError(field) {
+    return {
+      'has-error': this.checkValidTouched(field)
+    }
   }
 
 }
