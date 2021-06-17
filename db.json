@@ -90,6 +90,11 @@
       "email": "user2@email.com",
       "password": "123",
       "id": 2
+    },
+    {
+      "email": null,
+      "password": null,
+      "id": 3
     }
   ]
 }

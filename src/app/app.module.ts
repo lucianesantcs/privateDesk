@@ -13,6 +13,7 @@ import { FinancesModule } from './finances/finances.module';
 import { AuthService } from './login/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthGuard } from './shared/guards/auth-guard';
+import { FieldErrorMessageComponent } from './shared/components/field-error-message/field-error-message.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AuthGuard } from './shared/guards/auth-guard';
     HomeComponent,
     LoginComponent,
     SignupComponent,
-    HeaderComponent
+    HeaderComponent,
+    FieldErrorMessageComponent
   ],
   imports: [
     BrowserModule,

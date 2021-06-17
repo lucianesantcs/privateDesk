@@ -2,11 +2,13 @@
     <div class="input-group" [ngClass]="classError('email')">
         <label for="user">Email</label>
         <input type="email" id="email" formControlName="email" />
+        <app-field-error-message [showError]="checkValidTouched('email')" errorMessage="Email obrigatório"></app-field-error-message>
     </div>
 
     <div class="input-group" [ngClass]="classError('password')">
         <label for="password">Senha</label>
         <input type="password" id="password" formControlName="password" />
+        <app-field-error-message [showError]="checkValidTouched('password')" errorMessage="Senha obrigatória"></app-field-error-message>
     </div>
     <button>Criar Usuário</button>
     <button (click)="cancel()">Cancelar</button>
