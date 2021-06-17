@@ -33,7 +33,7 @@ export class SignupComponent implements OnInit {
   }
 
   checkValidTouched(field) {
-    return !this.form.get(field).valid && !this.form.get(field).touched;
+    return !this.form.get(field).valid && this.form.get(field).touched;
   }
 
   classError(field) {
