@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from '../login/user.model';
 import { SignupService } from './signup.service';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
@@ -9,19 +10,19 @@ import { SignupService } from './signup.service';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
+  form: FormGroup;
 
-  user: User = {
-    email: '',
-    password: ''
-  }
-
-  constructor(private signupService: SignupService, private router: Router) { }
+  constructor(private signupService: SignupService, private router: Router, private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+    this.form = this.formBuilder.group({
+      email: [null],
+      password: [null]
+    });
   }
 
   createUser(): void {
-    this.signupService.createUser(this.user).subscribe(() => {
+    this.signupService.createUser(this.form.value).subscribe(() => {
       this.signupService.showMessage('Usuário criado com sucesso!');
       this.router.navigate(['/login']);
     });

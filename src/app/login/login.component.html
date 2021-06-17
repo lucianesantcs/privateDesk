@@ -1,3 +1,5 @@
-<input type="email" placeholder="Usuario" [(ngModel)]="user.email">
-<input type="password" placeholder="Senha" [(ngModel)]="user.password">
-<button (click)="login()">Logar</button>
+<form [formGroup]="form" (ngSubmit)="login()">
+    <input type="email" placeholder="Usuario" formControlName="email" />
+    <input type="password" placeholder="Senha" formControlName="password" />
+    <button>Logar</button>
+</form>

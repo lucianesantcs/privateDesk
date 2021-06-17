@@ -11,7 +11,7 @@ import { AppRoutingModule } from './app.routing.module';
 import { NotesModule } from './notes/notes.module';
 import { FinancesModule } from './finances/finances.module';
 import { AuthService } from './login/auth.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthGuard } from './shared/guards/auth-guard';
 
 @NgModule({
@@ -28,6 +28,7 @@ import { AuthGuard } from './shared/guards/auth-guard';
     FinancesModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [AuthService, AuthGuard],

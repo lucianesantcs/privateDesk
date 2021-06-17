@@ -1,9 +1,9 @@
-<form>
+<form [formGroup]="form" (ngSubmit)="createUser()">
     <label for="user">Email</label>
-    <input type="email" id="email" name="email" [(ngModel)]="user.email" />
+    <input type="email" id="email" formControlName="email" />
 
     <label for="password">Senha</label>
-    <input type="password" id="password" name="password" [(ngModel)]="user.password" />
+    <input type="password" id="password" formControlName="password" />
+    <button>Criar Usuário</button>
+    <button (click)="cancel()">Cancelar</button>
 </form>
-<button (click)="createUser()">Criar Usuário</button>
-<button (click)="cancel()">Cancelar</button>
