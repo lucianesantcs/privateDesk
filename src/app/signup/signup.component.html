@@ -10,6 +10,6 @@
         <input type="password" id="password" formControlName="password" />
         <app-field-error-message [showError]="checkValidTouched('password')" errorMessage="Senha obrigatória"></app-field-error-message>
     </div>
-    <button>Criar Usuário</button>
+    <button type="submit">Criar Usuário</button>
     <button (click)="cancel()">Cancelar</button>
 </form>
