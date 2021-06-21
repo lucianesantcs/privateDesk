@@ -6,7 +6,7 @@ import { FinancesService } from '../finances.service';
 @Component({
   selector: 'app-add-finances',
   templateUrl: './add-finances.component.html',
-  styleUrls: ['./add-finances.component.css']
+  styleUrls: ['./add-finances.component.scss']
 })
 export class AddFinancesComponent implements OnInit {
   

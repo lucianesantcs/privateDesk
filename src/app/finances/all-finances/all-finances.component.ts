@@ -5,7 +5,7 @@ import { FinancesService } from '../finances.service';
 @Component({
   selector: 'app-all-finances',
   templateUrl: './all-finances.component.html',
-  styleUrls: ['./all-finances.component.css']
+  styleUrls: ['./all-finances.component.scss']
 })
 export class AllFinancesComponent implements OnInit {
 
