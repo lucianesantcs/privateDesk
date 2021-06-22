@@ -19,6 +19,7 @@ export class AuthService {
       this.router.navigate(['/']);
     } else {
       this.isAuthenticated = false;
+      this.showLoginMenuEmitter.emit(false);
     }
   }
 

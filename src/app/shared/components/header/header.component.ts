@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/login/auth.service';
 
 @Component({
@@ -7,6 +7,8 @@ import { AuthService } from 'src/app/login/auth.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
+  @Input() pageTitle: string;
 
   showLoginMenu: boolean = false;
 

@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { FinancesComponent } from './finances/finances.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { NotesComponent } from './notes/notes.component';
 import { AuthGuard } from './shared/guards/auth-guard';
 import { SignupComponent } from './signup/signup.component';
 

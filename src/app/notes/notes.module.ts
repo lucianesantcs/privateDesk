@@ -4,14 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { AddNotesComponent } from './add-notes/add-notes.component';
 import { PrivateNotesComponent } from './private-notes/private-notes.component';
 import { NotesComponent } from './notes.component';
-import { NotesHeaderComponent } from './components/notes-header/notes-header.component';
 import { NoteComponent } from './components/note/note.component';
 import { NotesRoutingModule } from './notes.routing.module';
 import { AllNotesComponent } from './all-notes/all-notes.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  declarations: [AddNotesComponent, PrivateNotesComponent, NotesHeaderComponent, NotesComponent, NoteComponent, AllNotesComponent],
-  imports: [CommonModule, NotesRoutingModule, FormsModule],
+  declarations: [AddNotesComponent, PrivateNotesComponent, NotesComponent, NoteComponent, AllNotesComponent],
+  imports: [CommonModule, NotesRoutingModule, FormsModule, SharedModule],
   exports: [NotesComponent, AllNotesComponent]
 })
 export class NotesModule {}
