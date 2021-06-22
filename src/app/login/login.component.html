@@ -1,9 +1,11 @@
-<app-header pageTitle="Login">
+<app-header pageTitle="Login" class="header">
     <li><a [routerLink]="['/login']" routerLinkActive="router-link-active">Login</a></li>
     <li><a [routerLink]="['/signup']" routerLinkActive="router-link-active">Cadastro</a> </li>
 </app-header>
-<form [formGroup]="form" (ngSubmit)="login()">
-    <input type="email" placeholder="Usuario" formControlName="email" />
-    <input type="password" placeholder="Senha" formControlName="password" />
-    <button>Logar</button>
-</form>
+<main class="container">
+    <form [formGroup]="form" (ngSubmit)="login()">
+        <input type="email" placeholder="Usuario" formControlName="email" />
+        <input type="password" placeholder="Senha" formControlName="password" />
+        <button>Logar</button>
+    </form>
+</main>

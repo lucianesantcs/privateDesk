@@ -1,0 +1,17 @@
+@import "includes";
+
+.container {
+  @include grid(16);
+
+  .header {
+    @include center;
+    flex-direction: column;
+    
+    ul {
+      display: inline-flex;
+    }
+    
+    @include grid-column-start(6);
+    @include grid-column-span(5);
+  }
+}
