@@ -1,11 +1,14 @@
-@mixin grid($columns-columns: $grid-columns, $GAP: 0) {
+@mixin grid($columns-columns, $gap: 0) {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: unquote(repeater("1fr ", $columns-columns));
-    grid-gap: $GAP;
+    grid-gap: $gap;
     grid-template-columns: repeat($columns-columns, 1fr);
     position: relative;
     width: 100%;
+}
+
+@mixin grid-rows($rows, $gap: 0) {
+    grid-template-rows: repeat($rows, 1fr);
 }
 
 @mixin grid-column-start($cols) {
@@ -13,7 +16,7 @@
     grid-column-start: $cols;
 }
 
-@mixin grid-column-span($cols: $grid-columns) {
+@mixin grid-column-span($cols) {
     grid-column-end: span $cols;
     -ms-grid-column-span: $cols;
 }

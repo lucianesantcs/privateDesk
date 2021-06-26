@@ -2,7 +2,6 @@
 
 .container {
   @include grid(16);
-//   background-color: blue;
 
   form {
     @include grid-column-start(7);
