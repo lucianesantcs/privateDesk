@@ -6,11 +6,43 @@
   .header {
     @include center;
     flex-direction: column;
-    
-    ul {
-      display: inline-flex;
+
+    h1 {
+      font-size: 1.5rem;
+      padding: 1em;
+      text-transform: uppercase;
+      letter-spacing: 0.5rem;
+
+      &::after {
+        content: '';
+        display: block;
+        margin: 0.5rem auto;
+        width: 50%;
+        height: 1px;
+        background-color: #dedede;
+      }
     }
-    
+
+    .navigation {
+      ul {
+        display: inline-flex;
+
+        li {
+          display: inline-block;
+          padding: 0.5em 1em;
+          margin: 0 1rem 0 0;
+
+          &:last-child {
+            margin-right: 0px;
+          }
+
+          a {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
     @include grid-column-start(6);
     @include grid-column-span(5);
   }

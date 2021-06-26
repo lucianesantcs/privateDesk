@@ -1,17 +1,5 @@
 @import "includes";
 
-.header {
-  li {
-    display: inline-block;
-    background-color: red;
-    margin: 0 1rem 0 0;
-
-    &:last-child {
-      margin-right: 0px;
-    }
-  }
-}
-
 .container {
   @include grid(16);
 //   background-color: blue;
