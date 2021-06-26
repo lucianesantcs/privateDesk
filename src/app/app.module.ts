@@ -8,7 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app.routing.module';
 import { NotesModule } from './notes/notes.module';
 import { FinancesModule } from './finances/finances.module';
-import { AuthService } from './login/auth.service';
+import { AuthService } from './auth.service';
 import { AuthGuard } from './shared/guards/auth-guard';
 import { HomeModule } from './home/home.module';
 import { LoginModule } from './login/login.module';

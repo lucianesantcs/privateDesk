@@ -4,10 +4,10 @@ import { User } from '../login/user.model';
 import { SignupService } from './signup.service';
 import {
   FormBuilder,
-  FormControl,
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -19,6 +19,7 @@ export class SignupComponent implements OnInit {
 
   constructor(
     private signupService: SignupService,
+    private authService: AuthService,
     private router: Router,
     private formBuilder: FormBuilder
   ) {}
@@ -33,7 +34,7 @@ export class SignupComponent implements OnInit {
   createUser(): void {
     if (this.form.valid) {
       this.signupService.createUser(this.form.value).subscribe(() => {
-        this.signupService.showMessage('Usuário criado com sucesso!');
+        this.authService.showMessage('Usuário criado com sucesso!');
         this.router.navigate(['/login']);
       });
     } else {

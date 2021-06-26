@@ -1,6 +1,6 @@
 import { EventEmitter, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { User } from './user.model';
+import { User } from './login/user.model';
 
 @Injectable({
   providedIn: 'root',
@@ -25,5 +25,9 @@ export class AuthService {
 
   userIsAuthenticated() {
     return this.isAuthenticated;
+  }
+
+  showMessage(message: string): void {
+    alert(message);
   }
 }

@@ -4,8 +4,17 @@
 </app-header>
 <main class="container">
     <form [formGroup]="form" (ngSubmit)="login()">
-        <input type="email" placeholder="Usuario" formControlName="email" />
-        <input type="password" placeholder="Senha" formControlName="password" />
+        <div class="input-group" [ngClass]="classError('email')">
+            <label for="user">Email</label>
+            <input type="email" id="email" formControlName="email" />
+            <app-field-error-message [showError]="checkValidTouched('email')" errorMessage="Email obrigatório"></app-field-error-message>
+        </div>
+
+        <div class="input-group" [ngClass]="classError('password')">
+            <label for="user">Senha</label>
+            <input type="password" id="password" formControlName="password" />
+            <app-field-error-message [showError]="checkValidTouched('password')" errorMessage="Senha é obrigatória"></app-field-error-message>
+        </div>
         <button>Logar</button>
     </form>
 </main>
