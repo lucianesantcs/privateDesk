@@ -39,16 +39,6 @@ li {
   list-style: none;
 }
 
-h1,
-h2 {
-  font-size: var(--title-font-size);
-  font-family: var(--title-font);
-}
-
-h3 {
-  font-size: var(--title-sub-font-size);
-}
-
 form {
   padding: 1rem;
 
@@ -71,5 +61,5 @@ form {
 }
 
 .container {
-  @include grid-rows(2);
+  @include grid-rows(1);
 }

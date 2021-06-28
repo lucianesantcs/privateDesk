@@ -1,25 +1,36 @@
 @import "includes";
 
 .container {
-  @include grid(2);
-
   section {
-    display: flex;
-    justify-content: center;
-    width: 100%;
     padding: 1em;
 
     &:first-child {
       @include grid-column-start(1);
-    //   @include grid-column-span(4);
+      @include grid-column-span(8);
 
       border-right: 1px solid #dedede;
     }
 
-    
     &:last-child {
-        @include grid-column-start(2);
-        // @include grid-column-span(4);
+      @include grid-column-start(9);
+      @include grid-column-span(8);
+
+      h3 {
+        font-size: 1rem;
+        padding: 1em;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+        text-align: center;
+
+        &::after {
+          content: "";
+          display: block;
+          margin: 0.5rem auto;
+          width: 70px;
+          height: 1px;
+          background-color: #dedede;
+        }
       }
+    }
   }
 }

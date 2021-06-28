@@ -1,9 +1,9 @@
-<ul *ngFor="let note of notes">
-    <li>
-        <h2>{{note.title}}</h2>
+<ul>
+    <li *ngFor="let note of notes">
+        <h3>{{note.title}}</h3>
         <p>{{note.description}}</p>
         <p>{{note.date}}</p>
         <p>{{note.tags}}</p>
-        <p>{{note.isPrivate}}</p>
+        <p>{{note.isPrivate ? 'Privada' : ''}}</p>
     </li>
 </ul>

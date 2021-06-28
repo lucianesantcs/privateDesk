@@ -1,0 +1,18 @@
+.notes {
+  h3 {
+    font-size: 1rem;
+    padding: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    text-align: center;
+
+    &::after {
+      content: "";
+      display: block;
+      margin: 0.5rem auto;
+      width: 70px;
+      height: 1px;
+      background-color: #dedede;
+    }
+  }
+}
