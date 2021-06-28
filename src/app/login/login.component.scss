@@ -5,6 +5,6 @@
 
   form {
     @include grid-column-start(7);
-    @include grid-column-span(3);
+    @include grid-column-span(4);
   }
 }

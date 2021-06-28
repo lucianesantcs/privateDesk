@@ -37,10 +37,4 @@ export class LoginComponent implements OnInit {
   checkValidTouched(field) {
     return !this.form.get(field).valid && (this.form.get(field).touched || this.form.get(field).dirty);
   }
-
-  classError(field) {
-    return {
-      'has-error': this.checkValidTouched(field),
-    };
-  }
 }

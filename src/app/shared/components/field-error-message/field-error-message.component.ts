@@ -9,6 +9,7 @@ export class FieldErrorMessageComponent implements OnInit {
 
   @Input() showError: boolean;
   @Input() errorMessage: string;
+  @Input() hasError = 'has-error';
 
   constructor() { }
 
