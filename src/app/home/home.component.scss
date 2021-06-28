@@ -1,0 +1,25 @@
+@import "includes";
+
+.container {
+  @include grid(2);
+
+  section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1em;
+
+    &:first-child {
+      @include grid-column-start(1);
+    //   @include grid-column-span(4);
+
+      border-right: 1px solid #dedede;
+    }
+
+    
+    &:last-child {
+        @include grid-column-start(2);
+        // @include grid-column-span(4);
+      }
+  }
+}

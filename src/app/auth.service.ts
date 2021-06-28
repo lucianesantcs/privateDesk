@@ -6,7 +6,7 @@ import { User } from './login/user.model';
   providedIn: 'root',
 })
 export class AuthService {
-  isAuthenticated: boolean = false;
+  isAuthenticated: boolean = true;
 
   showLoginMenuEmitter = new EventEmitter<boolean>();
 
