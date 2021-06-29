@@ -8,13 +8,9 @@
     @include grid-column-span(4);
 
     .input-group:last-of-type {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
+      @include grid(2, 1rem);
     }
 
-    button {
-      margin: 0;
-    }
+    
   }
 }

@@ -52,21 +52,14 @@ h3 {
 form {
   padding: 1rem;
 
-  input,
-  button {
+  input {
     width: 100%;
-    // border: none;
     padding: 1em 1.5em;
-
     margin: 1rem 0 0 0;
 
     &:first-child {
       margin-top: 0px;
     }
-  }
-  
-  button {
-    cursor: pointer;
   }
 
   label {

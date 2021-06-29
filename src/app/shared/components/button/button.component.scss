@@ -1,0 +1,10 @@
+button {
+  width: 100%;
+  padding: 1em 1.5em;
+  margin: 1rem 0 0 0;
+  cursor: pointer;
+
+  &:first-child {
+    margin-top: 0px;
+  }
+}
