@@ -1,8 +1,15 @@
 @import "includes";
 
 .container {
+  margin-bottom: 2rem;
+
   section {
     padding: 1em;
+    
+    .btn {
+      @include center;
+      margin: 3rem 0 0;
+    }
 
     &:first-child {
       @include grid-column-start(1);

@@ -5,11 +5,15 @@
 <main class="container">
     <section>
         <app-all-notes></app-all-notes>
-        <app-button>Carregar mais</app-button>
+        <div class="btn">
+            <app-button>Carregar mais</app-button>
+        </div>
     </section>
     <section>
         <h3>Finanças</h3>
         <app-finance-results></app-finance-results>
-        <app-button [routerLink]="['/finances/all-finances']">Ver todas as finanças</app-button>
+        <div class="btn">
+            <app-button [routerLink]="['/finances/all-finances']">Ver todas as finanças</app-button>
+        </div>
     </section>
 </main>
