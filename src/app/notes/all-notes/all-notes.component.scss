@@ -1,4 +1,4 @@
-.notes {
+.all-notes {
   h3 {
     font-size: 1rem;
     padding: 1em;
@@ -13,6 +13,40 @@
       width: 70px;
       height: 1px;
       background-color: #dedede;
+    }
+  }
+  
+  ul {
+    // @include grid-column-start(1);
+    // @include grid-column-span(4);
+  
+    // display: flex;
+    // flex-wrap: nowrap;
+    // flex-direction: column;
+    // align-items: center;
+  
+    h2 {
+      font-size: 1rem;
+      padding: 1em;
+    }
+  
+    li {
+      // width: 350px;
+  
+      &:not(:last-child)::after {
+        content: "";
+        display: block;
+        margin: 2rem auto;
+        width: 100%;
+        height: 1px;
+        background-color: #dedede;
+      }
+  
+      p {
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+      }
     }
   }
 }

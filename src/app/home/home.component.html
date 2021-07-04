@@ -4,7 +4,16 @@
 </app-header>
 <main class="container">
     <section>
-        <app-all-notes></app-all-notes>
+        <h3>Notas</h3>
+        <ul>
+            <li *ngFor="let note of notes">
+                <h2>{{note.title}}</h2>
+                <p>{{note.description}}</p>
+                <p>{{note.date}}</p>
+                <p>{{note.tags}}</p>
+                <p>{{note.isPrivate ? 'Privada' : ''}}</p>
+            </li>
+        </ul>
         <div class="btn">
             <app-button>Carregar mais</app-button>
         </div>
