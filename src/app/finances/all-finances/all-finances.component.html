@@ -1,5 +1,32 @@
 <article class="finances">
     <h3>Finanças</h3>
-    <app-finance-results></app-finance-results>
-    <app-finance [finances]="finances"></app-finance>
+
+    <div class="finances-result">
+        <ul>
+            <li>
+                <h2>Entradas</h2>
+                <p>R$ 5,000</p>
+            </li>
+
+            <li>
+                <h2>Saídas</h2>
+                <p>R$ 5,000</p>
+            </li>
+
+            <li>
+                <h2>Total</h2>
+                <p>R$ 5,000</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="all-finances">
+        <ul *ngFor="let finance of finances">
+            <li>
+                <h2>{{finance.title}}</h2>
+                <p>{{finance.description}}</p>
+                <p>{{finance.value}}</p>
+            </li>
+        </ul>
+    </div>
 </article>
