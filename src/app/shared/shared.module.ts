@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { FieldErrorMessageComponent } from './components/field-error-message/field-error-message.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ButtonComponent } from './components/button/button.component';
-import { TitleComponent } from './title/title.component';
+import { TitleComponent } from './components/title/title.component';
 
 
 
