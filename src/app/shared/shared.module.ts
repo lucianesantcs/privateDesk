@@ -4,12 +4,13 @@ import { RouterModule } from '@angular/router';
 import { FieldErrorMessageComponent } from './components/field-error-message/field-error-message.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ButtonComponent } from './components/button/button.component';
+import { TitleComponent } from './title/title.component';
 
 
 
 @NgModule({
-  declarations: [FieldErrorMessageComponent, HeaderComponent, ButtonComponent],
-  exports: [FieldErrorMessageComponent, HeaderComponent, ButtonComponent],
+  declarations: [FieldErrorMessageComponent, HeaderComponent, ButtonComponent, TitleComponent],
+  exports: [FieldErrorMessageComponent, HeaderComponent, ButtonComponent, TitleComponent],
   imports: [
     CommonModule, RouterModule
   ]

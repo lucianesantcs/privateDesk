@@ -4,7 +4,7 @@
 </app-header>
 <main class="container">
     <section>
-        <h3>Notas</h3>
+        <app-title title="Notas"></app-title>
         <ul>
             <li *ngFor="let note of notes">
                 <h2>{{note.title}}</h2>
@@ -19,7 +19,7 @@
         </div>
     </section>
     <section>
-        <h3>Finanças</h3>
+        <app-title title="Finanças"></app-title>
         <ul>
             <li>
                 <h2>Entradas</h2>
