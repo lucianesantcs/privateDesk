@@ -1,4 +1,9 @@
+@import "includes";
+
 .all-notes {
+  @include grid-column-start(2);
+  @include grid-column-span(14);
+
   h3 {
     font-size: 1rem;
     padding: 1em;
@@ -17,6 +22,10 @@
   }
   
   ul {
+    @include center;
+    align-items: baseline;
+    flex-wrap: wrap;
+    column-gap: 5rem;
     // @include grid-column-start(1);
     // @include grid-column-span(4);
   
@@ -31,9 +40,11 @@
     }
   
     li {
-      // width: 350px;
+      width: 15rem;
+      height: 18rem;
+      overflow: hidden;
   
-      &:not(:last-child)::after {
+      &::after {
         content: "";
         display: block;
         margin: 2rem auto;
@@ -43,9 +54,17 @@
       }
   
       p {
+        
+        &:nth-child(2) {
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;  
+          overflow: hidden;
+        }
+
         &:not(:last-child) {
           margin-bottom: 1rem;
-        }
+        }        
       }
     }
   }

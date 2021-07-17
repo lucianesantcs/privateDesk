@@ -1,15 +1,17 @@
-<article class="all-notes">
-  <div *ngIf="notes; then thenBlock; else elseBlock"></div>
-  <ng-template #thenBlock>
-    <ul>
-      <li *ngFor="let note of notes">
+<main class="container">
+  <article class="all-notes">
+    <div *ngIf="notes; then thenBlock; else elseBlock"></div>
+    <ng-template #thenBlock>
+      <ul>
+        <li *ngFor="let note of notes">
           <h2>{{note.title}}</h2>
           <p>{{note.description}}</p>
           <p>{{note.date}}</p>
           <p>{{note.tags}}</p>
           <p>{{note.isPrivate ? 'Privada' : ''}}</p>
-      </li>
-  </ul>
-  </ng-template>
-  <ng-template #elseBlock> Não há notas a serem exibidas. </ng-template>
-</article>
+        </li>
+      </ul>
+    </ng-template>
+    <ng-template #elseBlock> Não há notas a serem exibidas. </ng-template>
+  </article>
+</main>
