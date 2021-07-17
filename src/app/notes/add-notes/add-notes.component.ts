@@ -14,20 +14,13 @@ export class AddNotesComponent implements OnInit {
 
   createdAt = new Date().getTime().toString();
 
-  note: Notes = {
-    title: '',
-    description: '',
-    date: this.createdAt,
-    tags: [],
-    isPrivate: false,
-  }
-
   constructor(private notesService: NotesService, private router: Router, private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
       title: [null, Validators.required],
       description: [null],
+      date: this.createdAt,
       tags: [null],
       isPrivate: [null, Validators.required],
     });
@@ -35,7 +28,7 @@ export class AddNotesComponent implements OnInit {
 
 
   createNote(): void {
-    this.notesService.createNote(this.note).subscribe(() => {
+    this.notesService.createNote(this.form.value).subscribe(() => {
       this.notesService.showMessage('Nota criada com sucesso!')
       this.router.navigate(['/notes/all-notes']);
     })
