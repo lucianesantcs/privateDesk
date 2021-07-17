@@ -28,10 +28,17 @@ export class AddNotesComponent implements OnInit {
 
 
   createNote(): void {
-    this.notesService.createNote(this.form.value).subscribe(() => {
-      this.notesService.showMessage('Nota criada com sucesso!')
-      this.router.navigate(['/notes/all-notes']);
-    })
+    if(this.form.valid) {
+      this.notesService.createNote(this.form.value).subscribe(() => {
+        this.notesService.showMessage('Nota criada com sucesso!')
+        this.router.navigate(['/notes/all-notes']);
+      })
+    } else {
+      Object.keys(this.form.controls).forEach(field => {
+        const control = this.form.get(field);
+        control.markAsDirty();
+      })
+    }
   }
 
   cancel(): void {
