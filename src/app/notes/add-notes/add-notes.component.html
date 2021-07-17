@@ -1,21 +1,40 @@
-<p>add-notes works!</p>
-<form>
-    <label for="title">Título da nota</label>
-    <input type="text" id="title" name="title" [(ngModel)]="note.title" />
+<main class="container">
+  <form [formGroup]="form" (ngSubmit)="createNote()">
+    <div class="input-group">
+      <label for="title">Título da nota</label>
+      <input type="text" id="title" formControlName="title" />
+      <app-field-error-message [showError]="checkValidTouched('title')" errorMessage="Título obrigatório.">
+      </app-field-error-message>
+    </div>
 
-    <label for="description">Descrição</label>
-    <textarea id="description" name="description" [(ngModel)]="note.description"></textarea>
-    
-    <label for="tags">Tags</label>
-    <input type="text" id="tags" name="tags" [(ngModel)]="note.tags" />
+    <div class="input-group">
+      <label for="description">Descrição</label>
+      <textarea id="description" formControlName="description"></textarea>
+    </div>
 
-    <label>Disponibilidade:</label>
-    <input type="radio" id="yes" value="true" name="isPrivate" ngModel>
-    <label for="yes">Privado</label>
+    <div class="input-group">
+      <label for="tags">Tags</label>
+      <input type="text" id="tags" formControlName="tags" />
+    </div>
 
-    <input type="radio" id="no" value="false" name="isPrivate" ngModel>
-    <label for="no">Visível</label>
+    <div class="input-group">
+      <label>Disponibilidade:</label>
+      <div class="input-radio">
+        <input type="radio" id="yes" value="true" formControlName="isPrivate">
+        <label for="yes">Privado</label>
+      </div>
 
-</form>
-<button (click)="createNote()">Criar nota</button>
-<button (click)="cancel()">Cancelar</button>
+      <div class="input-radio">
+        <input type="radio" id="no" value="false" formControlName="isPrivate">
+        <label for="no">Visível</label>
+      </div>
+      <app-field-error-message [showError]="checkValidTouched('isPrivate')" errorMessage="Marque uma opção.">
+      </app-field-error-message>
+    </div>
+
+    <div class="input-group">
+      <app-button>Criar nota</app-button>
+      <app-button (click)="cancel()">Cancelar</app-button>
+    </div>
+  </form>
+</main>
