@@ -1,0 +1,14 @@
+@import "includes";
+
+.container {
+  @include grid(16);
+
+  form {
+    @include grid-column-start(7);
+    @include grid-column-span(4);
+
+    .input-group:last-of-type {
+      @include grid(2, 1rem);
+    }
+  }
+}

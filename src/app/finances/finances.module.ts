@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { FinancesComponent } from './finances.component';
 import { AddFinancesComponent } from './add-finances/add-finances.component';
@@ -10,7 +10,7 @@ import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
     declarations: [FinancesComponent, AddFinancesComponent, AllFinancesComponent],
-    imports: [CommonModule, FormsModule, FinancesRoutingModule, SharedModule],
+    imports: [CommonModule, FormsModule, ReactiveFormsModule, FinancesRoutingModule, SharedModule],
     exports: [FinancesComponent, AllFinancesComponent],
     providers: [],
 })
