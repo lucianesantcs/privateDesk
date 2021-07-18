@@ -1,6 +1,7 @@
 <app-header pageTitle="Notas">
-    <li><a routerLinkActive="active" [routerLink]="['/notes/add-notes']">Criar nota</a></li>
+    <li><a [routerLink]="['/']" routerLinkActive="router-link-active">Início</a> </li>
     <li><a routerLinkActive="active" [routerLink]="['/notes/all-notes']">Todas as notas</a></li>
+    <li><a routerLinkActive="active" [routerLink]="['/notes/add-notes']">Criar nota</a></li>
     <li><a routerLinkActive="active" [routerLink]="['/notes/private-notes']">Notas privadas</a></li>
 </app-header>
 <!-- <app-notes-header></app-notes-header> -->
