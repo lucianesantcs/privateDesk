@@ -26,7 +26,7 @@
           <li *ngFor="let finance of finances">
             <h2>{{finance.title}}</h2>
             <p>{{finance.description}}</p>
-            <p>{{finance.value}}</p>
+            <p>{{finance.value | currency : 'BRL'}}</p>
             <p>{{finance.date | date : 'dd/MM/yyyy'}}</p>
           </li>
         </ul>
