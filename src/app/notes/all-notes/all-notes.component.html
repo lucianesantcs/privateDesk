@@ -6,7 +6,7 @@
         <li *ngFor="let note of notes">
           <h2>{{note.title}}</h2>
           <p>{{note.description}}</p>
-          <p>{{note.date}}</p>
+          <p>{{note.date | date : 'dd/MM/yyyy'}}</p>
           <p>{{note.tags}}</p>
           <p>{{note.isPrivate ? 'Privada' : ''}}</p>
         </li>

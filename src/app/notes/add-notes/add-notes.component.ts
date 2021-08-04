@@ -12,7 +12,7 @@ import { NotesService } from '../notes.service';
 export class AddNotesComponent implements OnInit {
   form: FormGroup;
 
-  createdAt = new Date().getTime().toString();
+  createdAt = new Date().getTime();
 
   constructor(private notesService: NotesService, private router: Router, private formBuilder: FormBuilder) { }
 
