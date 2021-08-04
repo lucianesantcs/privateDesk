@@ -1,39 +1,52 @@
 {
   "notas": [
     {
-      "id": 1,
-      "title": "Nota 1",
-      "description": "Descrição nota 1",
-      "date": "17/05/2021",
-      "tags": [
-        "#tag 1",
-        "#tag 2",
-        "#tag 3"
-      ],
-      "isPrivate": true
+      "title": "Nota completa",
+      "description": "Tem descrição e com campo menor",
+      "date": 1628117148697,
+      "tags": "tag da nota um, separado por vírgulas",
+      "isPrivate": "false",
+      "id": 1
+    },
+    {
+      "title": "Outra nota sem descrição",
+      "description": null,
+      "date": 1628117266387,
+      "tags": "possuí tag",
+      "isPrivate": "true",
+      "id": 2
+    },
+    {
+      "title": "Nota sem descrição ou tags",
+      "description": null,
+      "date": 1628117321219,
+      "tags": null,
+      "isPrivate": "false",
+      "id": 3
+    },
+    {
+      "title": "Nota completa com descrição longa",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+      "date": 1628117359567,
+      "tags": "exercitation, laboris, nostrud",
+      "isPrivate": "true",
+      "id": 4
     }
   ],
   "financas": [
     {
-      "id": 1,
-      "title": "Finança 1",
-      "description": "Descrição finança 1",
-      "value": 1548,
-      "date": "17/05/2021"
+      "title": "Título da finança",
+      "description": "Adicionada uma descrição opcional",
+      "value": 12584,
+      "date": 1628117464063,
+      "id": 1
     },
     {
-      "id": 2,
-      "title": "Finança 2",
-      "description": "Descrição finança 2",
-      "value": 5548,
-      "date": "17/05/2021"
-    },
-    {
-      "id": 3,
-      "title": "Finança 3",
-      "description": "Descrição finança 3",
-      "value": 9548,
-      "date": "17/05/2021"
+      "title": "Título sem descrição",
+      "description": null,
+      "value": 48488,
+      "date": 1628117609935,
+      "id": 2
     }
   ],
   "usuarios": [
