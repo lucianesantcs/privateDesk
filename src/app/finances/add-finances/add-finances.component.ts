@@ -12,7 +12,7 @@ import { FinancesService } from '../finances.service';
 export class AddFinancesComponent implements OnInit {
   form: FormGroup;
 
-  createdAt = new Date().getTime().toString();
+  createdAt = new Date().getTime();
 
   constructor(
     private financesService: FinancesService,
